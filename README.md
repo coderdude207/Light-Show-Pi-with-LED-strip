@@ -1,19 +1,22 @@
-[http://lightshowpi.org/](http://lightshowpi.org/)
+An Edited version of lightshowpi for rgb led strip the original version available on [http://lightshowpi.org/](http://lightshowpi.org/)
+The edited installation available on 
+
+[http://suffcingbowl7.github.io/](http://suffcingbowl7.github.io/)
 
 All files here are free to use under the BSD License (see the LICENSE file for details).  All we
 ask in return is that you send any updates / improvements you may make to them back to us so 
 that we can all benefit from your improvements!
 
-Join us on our [Google+ community page](https://plus.google.com/communities/101789596301454731630) and / or [Facebook page](https://www.facebook.com/lightshowpi) as well to share your experiences using lightshowPi, as well as videos of your shows!
+Join on the original community on Their [Google+ community page](https://plus.google.com/communities/101789596301454731630) and / or [Facebook page](https://www.facebook.com/lightshowpi) as well to share your experiences using lightshowPi, as well as videos of your shows!
 
-Thanks, and enjoy ;)
-
-Todd Giles ([todd@lightshowpi.org](mailto:todd@lightshowpi.org))
+Thanks to Todd Giles for this this awesome thing
+Thanks and enjoy
+Himanshu Gore
 
 Installation / Getting Started
 ==============================
 
-Please visit the [Getting Started Page](http://lightshowpi.org/getting-started) for details on getting
+Please visit the [Getting Started Page](http://suffcingbowl7.github.io) for details on getting
 started.  Or for those who want to just jump on in, feel free to run the install.sh script and go 
 for it :-)
 
