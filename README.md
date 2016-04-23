@@ -9,8 +9,8 @@ that we can all benefit from your improvements!
 
 Join on the original community on Their [Google+ community page](https://plus.google.com/communities/101789596301454731630) and / or [Facebook page](https://www.facebook.com/lightshowpi) as well to share your experiences using lightshowPi, as well as videos of your shows!
 
-Thanks to Todd Giles for this this awesome thing
-Thanks and enjoy
+Thanks to Todd Giles for this this awesome thing.
+Thanks and enjoy :-)
 Himanshu Gore
 
 Installation / Getting Started
