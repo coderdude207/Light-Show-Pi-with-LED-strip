@@ -1,7 +1,5 @@
 */Install unzip using /*
 sudo apt-get install unzip
-*/ Download zip file/*
-wget https://codeload.github.com/suffcingbowl7/Light-Show-Pi-with-LED-strip/zip/master
 */Unzip the directory using /*
 cd ~
 sudo unzip Light-Show-Pi-with-LED-strip-master.zip
@@ -11,3 +9,5 @@ sudo mv /home/pi/Light-Show-Pi-with-LED-strip-master /home/pi/lightshowpi
 sudo rm Light-Show-Pi-with-LED-strip-master.zip
 */ Other steps are same as from step 4 on website "http://suffcingbowl7.github.io/" /*
  For More Information about Light Show Pi please refer to http://lightshowpi.org/
+*/ OR download directly from terminal /*
+wget https://codeload.github.com/suffcingbowl7/Light-Show-Pi-with-LED-strip/zip/master
