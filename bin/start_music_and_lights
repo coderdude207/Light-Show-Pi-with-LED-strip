@@ -1,0 +1,18 @@
+#!/bin/bash
+#
+# Start the music and lights show (killing any existing instances first)
+#
+# Author: Todd Giles (todd.giles@gmail.com)
+# Modifications: Chris Usey (chris.usey@gmail.com), Sean Millar (sean.millar@gmail.com)
+
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+# Check that the home environment variable is set
+if [ -z ${SYNCHRONIZED_LIGHTS_HOME} ]; then
+    cat $DIR/env_error_msg
+    exit 1
+fi 
+
+$SYNCHRONIZED_LIGHTS_HOME/bin/stop_music_and_lights $$
+$SYNCHRONIZED_LIGHTS_HOME/bin/play_sms &
+$SYNCHRONIZED_LIGHTS_HOME/bin/check_sms &

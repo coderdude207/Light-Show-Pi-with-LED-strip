@@ -1,0 +1,27 @@
+#!/bin/bash
+#
+# Play audio files with synchronized lights.  Supports
+# mp3, wav, ogg, wma, etc...
+#
+# Sample Usage:
+#
+# play /home/pi/music/*
+# play /home/pi/music/jingle_bells.mp3
+#
+# Author: Todd Giles (todd.giles@gmail.com)
+# Modifications: Chris Usey (chris.usey@gmail.com), Sean Millar (sean.millar@gmail.com)
+
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+# Check that the home environment variable is set
+if [ -z ${SYNCHRONIZED_LIGHTS_HOME} ]; then
+    cat $DIR/env_error_msg
+    exit 1
+fi 
+
+IFS=$(echo -en "\n\b")
+for f in $@
+do
+  filename=$(basename "$f")
+  sudo python $SYNCHRONIZED_LIGHTS_HOME/py/synchronized_lights.py --file="$f"
+done

@@ -1,0 +1,28 @@
+#!/bin/bash
+
+## Package manager installation command
+INSTALL_COMMAND="apt-get install -q=2 -y"
+
+## Python dependencies to be installed
+PYTHON_DEPS=(Beautifulsoup mutagen simplejson wiringpi2 pygooglevoice)
+
+## System packages to be installed
+SYSTEM_DEPS=(curl faad flac gcc git lame mpg123 make python-alsaaudio python-dev \
+             python-numpy python-pip python-setuptools unzip vorbis-tools wiringpi \
+             cython pianobar)
+
+## Miscellaneous checks
+
+# The ffmpeg library changed starting with Debian 8
+# Try to install ffmpeg first, then libav-tools
+echo -ne "\e[0;31mNOTE:\e[m " >&2
+echo "Installing ffmpeg..."
+$INSTALL_COMMAND ffmpeg || \
+    (echo -ne "\e[0;31mNOTE:\e[m " >&2 && echo "Installation failed, trying libav-tools..." && \
+     $INSTALL_COMMAND libav-tools && ln -fs /usr/bin/avconv /usr/bin/ffmpeg)
+
+if [ $? -ne 0 ]; then
+    echo -ne "\e[1;31mERROR:\e[m " >&2
+    echo "A problem occurred while installing ffmpeg."
+    exit 1
+fi

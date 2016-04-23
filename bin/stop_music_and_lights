@@ -1,0 +1,37 @@
+#!/bin/bash
+#
+# Ensure that all the music and lights are off
+#
+# Author: Todd Giles (todd.giles@gmail.com)
+# Modifications: Chris Usey (chris.usey@gmail.com), Sean Millar (sean.millar@gmail.com) 
+
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+# Check that the home environment variable is set
+if [ -z ${SYNCHRONIZED_LIGHTS_HOME} ]; then
+    cat ${DIR}/env_error_msg
+    exit 1
+fi 
+
+id=$1
+
+if [ -z "$id" ]; then
+    id="xxxx"
+fi
+
+for OUTPUT in $(pgrep -f lightshowpi); do
+    if [ ${OUTPUT} != ${id} ] && [ ${OUTPUT} != $$ ]; then
+        out=`ps -p ${OUTPUT} -o cmd`
+
+        if [[ ${out} == *"${SYNCHRONIZED_LIGHTS_HOME}"* ]]; then
+            echo "killing:"
+            echo  ${out}
+        fi
+
+        sudo kill ${OUTPUT}
+
+    fi
+done
+
+# Turn off lights and set back to inputs
+sudo python $SYNCHRONIZED_LIGHTS_HOME/py/hardware_controller.py --state=cleanup

@@ -1,0 +1,45 @@
+#!/bin/bash
+#
+# This is a template file for installing lightshowpi on Linux distributions
+# running on a Raspberry Pi.
+#
+# Copy this file and name it the same as the output of this command on your
+# target distribution:
+#   $ awk -F= '$1~/^ID$/ {print $2}' /etc/os-release
+#
+# Include all dependencies as named in your package repository of choice.
+# IF YOU MUST install something from source, do it at the end of this file. Any
+# commands run here will execute before this script returns to the main install
+# routine.
+#
+# If you get stuck, look at the raspbian and arch scripts for example usage.
+#
+# At the very minimum, set the following environment variables:
+# - INSTALL_COMMAND : The command you use to install packages with your package manager
+# - PYTHON_DEPS : Python dependencies of lightshowpi
+# - SYSTEM_DEPS : Package dependencies of lightshowpi
+
+## Package manager installation command
+INSTALL_COMMAND=
+
+## Python dependencies to be installed
+PYTHON_DEPS=(mutagen pyalsaaudio wiringpi2 Beautifulsoup simplejson pygooglevoice)
+
+## System packages to be installed
+# Include at a minimum:
+# - pip for Python 2
+# - ffmpeg
+# - flac
+# - lame
+# - vorbis-tools
+# - faad
+# - gcc 
+# - git 
+# - make
+# - unzip
+# - wiringpi
+# - Python 2 numpy - faster than using PyPi repositories
+SYSTEM_DEPS=(ffmpeg flac gcc git lame make unzip vorbis-tools faad python-pip python-setuptools python-dev python-alsaaudio wiringpi python-numpy)
+
+
+## Miscellaneous other routines

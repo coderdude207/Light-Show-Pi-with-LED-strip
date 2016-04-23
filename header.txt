@@ -1,0 +1,41 @@
+ 
+A+, B+ and Pi2 B, and Zero models
+                         +=========+
+         POWER  3.3VDC   | 1 . . 2 |  5.0VDC   POWER
+      I2C SDA1  GPIO  8  | 3 . . 4 |  5.0VDC   POWER
+      I2C SCL1  GPIO  9  | 5 . . 6 |  GROUND
+      CPCLK0    GPIO  7  | 7 . . 8 |  GPIO 15  TxD UART
+                GROUND   | 9 . . 10|  GPIO 16  RxD UART
+                GPIO  0  |11 . . 12|  GPIO  1  PCM_CLK/PWM0
+                GPIO  2  |13 . . 14|  GROUND
+                GPIO  3  |15 . . 16|  GPIO  4
+         POWER  3.3VDC   |17 . . 18|  GPIO  5
+      SPI MOSI  GPIO 12  |19 .   20|  GROUND
+      SPI MISO  GPIO 13  |21 . . 22|  GPIO  6
+      SPI SCLK  GPIO 14  |23 . . 24|  GPIO 10  CE0 SPI
+                GROUND   |25 . . 26|  GPIO 11  CE1 SPI
+ I2C ID EEPROM  SDA0     |27 . . 28|  SCL0     I2C ID EEPROM
+        GPCLK1  GPIO 21  |29 . . 30|  GROUND
+        CPCLK2  GPIO 22  |31 . . 32|  GPIO 26  PWM0
+          PWM1  GPIO 23  |33 . . 34|  GROUND
+   PCM_FS/PWM1  GPIO 24  |35 . . 36|  GPIO 27
+                GPIO 25  |37 . . 38|  GPIO 28  PCM_DIN
+                GROUND   |39 . . 40|  GPIO 29  PCM_DOUT
+                         +=========+
+
+A and B models
+                         +=========+
+         POWER  3.3VDC   | 1 . . 2 |  5.0VDC   POWER
+      I2C SDA0  GPIO  8  | 3 . . 4 |  DNC  
+      I2C SCL0  GPIO  9  | 5 . . 6 |  GROUND
+                GPIO  7  | 7 . . 8 |  GPIO 15  TxD UART
+                DNC      | 9 . . 10|  GPIO 16  RxD UART
+                GPIO  0  |11 . . 12|  GPIO  1  PCM_CLK/PWM0
+                GPIO  2  |13 . . 14|  DNC
+                GPIO  3  |15 . . 16|  GPIO  4
+                DNC      |17 . . 18|  GPIO  5
+      SPI MOSI  GPIO 12  |19 .   20|  DNC
+      SPI MISO  GPIO 13  |21 . . 22|  GPIO  6
+      SPI SCLK  GPIO 14  |23 . . 24|  GPIO 10  CE0 SPI
+                DNC      |25 . . 26|  GPIO 11  CE1 SPI
+                         +=========+

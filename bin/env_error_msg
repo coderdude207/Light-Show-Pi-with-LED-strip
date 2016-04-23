@@ -1,0 +1,6 @@
+
+You need to first setup the SYNCHRONIZED_LIGHTS_HOME environment variable to point to the install
+directory for lightshowPi.  Please visit the lightshowPi wiki page for more information:
+
+https://bitbucket.org/togiles/lightshowpi/wiki/Home#markdown-header-synchronized_lights_home-environment-variable
+

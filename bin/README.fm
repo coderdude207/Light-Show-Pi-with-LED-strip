@@ -1,0 +1,10 @@
+
+Attribution for fm processing programs :
+
+pifm - https://github.com/rm-hull/pifm
+
+pi_fm_rds - https://github.com/ChristopheJacquet/PiFmRds
+
+Note that pi_fm_rds has been modified for lightshowpi to accept a sample rate
+and number of channels for piped input (stdin), as previous behavior is to
+use a raw pcm (wav) header to determine these values

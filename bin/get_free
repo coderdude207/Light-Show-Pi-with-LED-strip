@@ -1,0 +1,5 @@
+#!/bin/bash
+#
+# Get the amount of free MB in the system
+
+echo "Free memory: "`free -m | grep - | awk '{print $4}'`"MB"

@@ -1,0 +1,19 @@
+# This is a configuration file for pylint used for lightshowPi.
+#
+# This program is free software under the BSD License (v2). Read the file LICENSE that comes with
+# lightshowPi for details.
+#
+# Author: Todd Giles <todd.giles@gmail.com>
+#
+# This configuration should be used when linting all Python files in lightshowPi:
+#   pylint --rcfile=tools/.pylintrc py/*
+
+[FORMAT]
+
+# Maximum number of characters on a single line. (Increased from default 80)
+max-line-length=100
+
+[VARIABLES]
+
+# A regular expression matching prefix names used for dummy variables (i.e. not used).
+dummy-variables-rgx=_
